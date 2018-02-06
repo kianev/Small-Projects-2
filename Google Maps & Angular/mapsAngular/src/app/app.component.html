@@ -1,0 +1,5 @@
+<h1>{{ title }}</h1>
+
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onClickLocation($event)">
+  <agm-marker [latitude]="lat" [longitude]="lng" *ngIf="locationChosen"></agm-marker>
+</agm-map>
