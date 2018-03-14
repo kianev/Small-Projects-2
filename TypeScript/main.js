@@ -6,7 +6,24 @@ var Point = /** @class */ (function () {
     Point.prototype.draw = function () {
         console.log('X: ' + this.x + ' Y: ' + this.y);
     };
+    Object.defineProperty(Point.prototype, "X", {
+        get: function () {
+            return this.x;
+        },
+        set: function (value) {
+            if (value < 0) {
+                throw new Error('Value cannot be less than 0');
+            }
+            else {
+                this.x = value;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Point;
 }());
 var point = new Point(1, 2);
+var x = point.X;
+point.X = 10;
 point.draw();
