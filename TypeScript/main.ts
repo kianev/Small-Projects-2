@@ -1,14 +1,12 @@
-let a: number;
-let b: boolean;
-let c: string;
-let d: any;
-let e: number[] = [1, 2, 3];
-let f: any[] = [1, true, "any", false];
+let message;
+message = 'abc';
+let endsWithC = message.endsWith('c');
+let endsWithB = message.endsWith('b');
+console.log(endsWithC);
+console.log(endsWithB);
 
-const ColorRed = 0;
-const ColorBlue = 1;
-const ColorGreen = 2;
+let log = function (message) {
+    console.log(message);
+};
 
-enum Color {Red = 0, Blue = 1, Green = 2}
-let backgroundColor = Color.Red;
-console.log(backgroundColor);
+let doLog = (message) => console.log(message);
